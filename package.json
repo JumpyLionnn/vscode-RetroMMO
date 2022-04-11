@@ -2,7 +2,7 @@
     "name": "retrommo",
     "displayName": "RetroMMO",
     "description": "a retrommo client inside vscode",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "JumpyLionnn",
     "icon": "assets/retrommo.png",
     "engines": {
