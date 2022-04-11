@@ -1,7 +1,7 @@
 # RetroMMO
 
-Do you want to work on your project and play RetroMMO simultaneously??? <br>
-Play RetroMMO straight in vscode without the need to open the browser!
+Do you want to work on your project and play [RetroMMO](https://retro-mmo.com) simultaneously??? <br>
+Play [RetroMMO](https://retro-mmo.com) straight in vscode without the need to open the browser!
 
 
 > note: This is not an oficial client. This extension is not affiliated with RetroMMO.
@@ -9,13 +9,13 @@ Play RetroMMO straight in vscode without the need to open the browser!
 ## Features
 
 Open RetrMMO with a click of 1 button inside vscode!
-![example](./assets/example3.png)
+![example](https://github.com/JumpyLionnn/vscode-RetroMMO/raw/master/assets/example3.PNG)
 
 open via a command:
-![via a command](./assets/example2.png)
+![via a command](https://github.com/JumpyLionnn/vscode-RetroMMO/raw/master/assets/example2.PNG)
 
 or via a button:
-![via a command](./assets/example1.png)
+![via a command](https://github.com/JumpyLionnn/vscode-RetroMMO/raw/master/assets/example1.PNG)
 
 ## Extension Settings
 
