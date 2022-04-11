@@ -22,7 +22,7 @@ function getWebviewContent() {
 	const kind = <string>config.get("kind", "regular");
 	let url: string;
 	if(kind === "localhost (dev)"){
-		url = "http://localhost:" + config.get("port", 3000);
+		url = "http://localhost:" + config.get("localhost-port", 3000);
 	}
 	else{
 		url = urlLookup[kind];
@@ -43,7 +43,7 @@ function getWebviewContent() {
 		</style>
 	</head>
 	<body>
-	<iframe id="game" src="${url}"></iframe>
+		<iframe id="game" src="${url}"></iframe>
 	</body>
 	</html>`;
 }

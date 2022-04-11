@@ -39,10 +39,10 @@
                     "enum": ["regular", "development version (retrommo2)", "bots", "localhost (dev)"],
                     "description": "Specify the kind of the client"
                 },
-                "retrommo.localhost": {
+                "retrommo.localhost-port": {
                     "type": "integer",
                     "default": 3000,
-                    "description": "Specify the port of the localhost"
+                    "description": "Specify the port of the localhost in case the localhost kind is set"
                 }
             }
         }

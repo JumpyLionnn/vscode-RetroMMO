@@ -26,7 +26,7 @@ the RetroMMO client kind:
 * bots - the server that is allowing bots (https://retrommo-bots.herokuapp.com)
 * localhost - for the RetroMMO developers ( localhost:[port] )
 
-### port
+### localhost-port
 if the kind is set to localhost then this will be the port for the host
 
 ## Known Issues
