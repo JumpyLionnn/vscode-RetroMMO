@@ -3,6 +3,7 @@
     "displayName": "RetroMMO",
     "description": "a retrommo client inside vscode",
     "version": "0.0.1",
+    "publisher": "JumpyLionnn",
     "engines": {
         "vscode": "^1.66.0"
     },
