@@ -19,7 +19,15 @@ or via a button:
 
 ## Extension Settings
 
-There are no special settings for this extension.
+### kind
+the RetroMMO client kind:
+* regular - The regular cliet that every player is playing on (https://play.retro-mmo.com).
+* development version (retrommo2) - the new RetroMMO version v2 (https://retrommo2.herokuapp.com)
+* bots - the server that is allowing bots (https://retrommo-bots.herokuapp.com)
+* localhost - for the RetroMMO developers ( localhost:[port] )
+
+### port
+if the kind is set to localhost then this will be the port for the host
 
 ## Known Issues
 

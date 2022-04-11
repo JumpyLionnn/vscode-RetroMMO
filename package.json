@@ -2,11 +2,11 @@
     "name": "retrommo",
     "displayName": "RetroMMO",
     "description": "a retrommo client inside vscode",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "JumpyLionnn",
     "icon": "assets/retrommo.png",
     "engines": {
-        "vscode": "^1.66.0"
+        "vscode": "^1.60.0"
     },
     "categories": [
         "Other"
@@ -30,6 +30,21 @@
                 "command": "retrommo.open",
                 "group": "navigation"
             }]
+        },
+        "configuration": {
+            "title": "RetroMMO",
+            "properties": {
+                "retrommo.kind": {
+                    "default": "regular",
+                    "enum": ["regular", "development version (retrommo2)", "bots", "localhost (dev)"],
+                    "description": "Specify the kind of the client"
+                },
+                "retrommo.localhost": {
+                    "type": "integer",
+                    "default": 3000,
+                    "description": "Specify the port of the localhost"
+                }
+            }
         }
     },
     "scripts": {
@@ -44,7 +59,7 @@
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/vscode": "^1.66.0",
+        "@types/vscode": "^1.60.0",
         "@types/glob": "^7.2.0",
         "@types/mocha": "^9.1.0",
         "@types/node": "14.x",

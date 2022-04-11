@@ -5,7 +5,8 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('retrommo.open', () => {
 		const panel = vscode.window.createWebviewPanel("retrommo", "RetroMMO", vscode.ViewColumn.Beside, {
 			enableScripts: true,
-			enableForms: true
+			enableForms: true,
+			retainContextWhenHidden: true
 		});
 
 		// And set its HTML content
@@ -17,6 +18,15 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function getWebviewContent() {
+	const config = vscode.workspace.getConfiguration('retrommo');
+	const kind = <string>config.get("kind", "regular");
+	let url: string;
+	if(kind === "localhost (dev)"){
+		url = "http://localhost:" + config.get("port", 3000);
+	}
+	else{
+		url = urlLookup[kind];
+	}
 	return `<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -33,10 +43,17 @@ function getWebviewContent() {
 		</style>
 	</head>
 	<body>
-	<iframe id="game" src="https://play.retro-mmo.com"></iframe>
+	<iframe id="game" src="${url}"></iframe>
 	</body>
 	</html>`;
 }
+
+
+const urlLookup: {[kind: string]: string} = {
+	"regular": "https://play.retro-mmo.com",
+	"development version (retrommo2)": "https://retrommo2.herokuapp.com/",
+	"bots": "https://retrommo-bots.herokuapp.com"
+};
 
 // this method is called when your extension is deactivated
 export function deactivate() {}
