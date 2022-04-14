@@ -3,7 +3,8 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 	
 	let disposable = vscode.commands.registerCommand('retrommo.open', () => {
-		const panel = vscode.window.createWebviewPanel("retrommo", "RetroMMO", vscode.ViewColumn.Beside, {
+		const location = vscode.workspace.getConfiguration('retrommo').get("split", true) ? vscode.ViewColumn.Beside : vscode.ViewColumn.Active;
+		const panel = vscode.window.createWebviewPanel("retrommo", "RetroMMO", location, {
 			enableScripts: true,
 			enableForms: true,
 			retainContextWhenHidden: true

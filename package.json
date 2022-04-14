@@ -2,7 +2,7 @@
     "name": "retrommo",
     "displayName": "RetroMMO",
     "description": "a retrommo client inside vscode",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "JumpyLionnn",
     "icon": "assets/retrommo.png",
     "engines": {
@@ -37,12 +37,17 @@
                 "retrommo.kind": {
                     "default": "regular",
                     "enum": ["regular", "development version (retrommo2)", "bots", "localhost (dev)"],
-                    "description": "Specify the kind of the client"
+                    "description": "Specify the kind of the client."
                 },
                 "retrommo.localhost-port": {
                     "type": "integer",
                     "default": 3000,
-                    "description": "Specify the port of the localhost in case the localhost kind is set"
+                    "description": "Specify the port of the localhost in case the localhost kind is set."
+                },
+                "retrommo.split": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Split the screens when opening a new game tab."
                 }
             }
         }
